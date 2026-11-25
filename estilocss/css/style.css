@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background: #f8fafc;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+.encabezado {
+    background: #172554;
+    padding: 18px 8%;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.logo {
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #7dd3fc;
+}
+
+.slider {
+  position: relative;  
+  height: 430px;
+  overflow: hidden;
+  color: white;
+  background: #0f17a0;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    animation: cambiar-slide 15s infinite;
+}
+
+.slide {
+    width: 33.3333%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 50px 12%;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide-1 {
+    background-image: linear-gradient(90deg, rgba(15,23,42, .92),rgba(15,23,42, .25)),
+    url("https://placehold.co/1600x700/1e3a8a/ffffff?text=Promocion+1");
+}
+
+.slide-2 {
+ background-image: linear-gradient(90deg, rgba(15,23,42, .92),rgba(15,23,42, .25)),
+    url("https://placehold.co/1600x700/1e3a8a/ffffff?text=Promocion+2");
+}
+
+.slide-3 {
+ background-image: linear-gradient(90deg, rgba(15,23,42, .92),rgba(15,23,42, .25)),
+    url("https://placehold.co/1600x700/1e3a8a/ffffff?text=Promocion+3");
+}
+
+.slide-contenido {
+    max-width: 580px;
+}
+
+.etiqueta {
+    color: #0284c7;
+    font-size: .85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.slide .etiqueta {
+    color: #7dd3fc;
+}
+
+.slide h1,
+.slide h2 {
+    font-size: clamp(2rem,5vw,3.5rem);
+    line-height: 1.1;
+    margin: 12px 0;
+}
+
+.slide p:not(.etiqueta)
+{
+    max-width: 500px;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap:10px;
+}
+
+.indicadores span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255, .55);
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 24px;
+    color: white;
+    background-color:#0284c7 ;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background .3s, transform .3s;
+}
+
+.boton:hover {
+    background:#0369a1;
+    transform: translateY(-2px);
+}
+
+.productos {
+    padding: 70px 8%;
+}
+
+.encabezado-seccion {
+    max-width: 700px;
+    margin: 0 auto 38px;
+    text-align: center;
+}
+
+.encabezado-seccion h2 {
+    margin: 8px 0;
+    font-size: 2rem;
+    color: #172554;
+}
+
+.encabezado-seccion > p:last-child {
+    color: #64748b;
+}
+
+@keyframes cambiar-slide {
+    0%, 28% {transform: translate(0);}
+    33%, 61% {transform: translate(-33.3333%);}
+    66%, 94% {transform: translate(-66.6666%);}
+    100% {transform: translate(0);}
+}
+
+.contenedor-cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    overflow: hidden;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(15,23,42, .08);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(15,23,42, .14);
+
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-contenido {
+    padding: 22px;
+}
+
+.categoria {
+    color: #0284c7;
+    font-size: .8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card h3 {
+    margin: 8px 0;
+    color: #172554;
+}
+
+.card-contenido p {
+    min-height: 52px;
+    color: #64748b;
+}
+
+.card-pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.precio {
+    color: #0284c7;
+    font-size: 1.35rem;
+}
+
+.contacto {
+    background: #eaf1f8;
+}
+
+.seccion {
+    padding: 50px 6%;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(15,23,42, .07);
+}
+
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border:  1px solid #cbd5e1;
+    border-radius: 6px;
+    font:inherit
+}
+
+.boton-enviar{
+    width: 100%;
+}
+
+.footer {
+    padding: 25px;
+    color:white;
+    background: #172554;
+    text-align: center;
+}
+
+@media (max-width:900px) {
+    .encabezado {
+        padding: 16px 5%;
+    }
+
+    .menu {
+        gap: 18px;
+    }
+
+    .contenedor-cards {
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .slide {
+        padding: 40px 8%;
+    }
+
+    .slider {
+        height: 300px;
+    }
+}
+
+@media (max-width:700px){
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 18px;
+    }
+
+    .slider {
+        height: 250px;
+    }
+
+    .slide h1,
+    .slide h2 {
+        font-size: clamp(1.2rem, 6vw, 2.6rem);
+    }
+
+    .slide p:not(.etiqueta)
+    {
+        font-size: 1rem;
+    }
+
+    .contenedor-cards {
+        grid-template-columns: 1fr;
+        max-width: 480px;
+    }
+
+    .formulario {
+        padding: 24px;
+    }
+}
+
+@media (max-width:480px){
+    .encabezado {
+        padding: 10px 5%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .menu {
+        gap: 8px 14px;
+        font-family: 0.8rem;
+    }
+
+    .slide {
+        padding: 28px 6%;
+    }
+
+    .slide h1,
+    .slide h2 {
+        font-size: clamp(0.8rem, 6vw, 2.2rem);
+    }
+
+    .boton {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .card-pie {
+        flex-wrap: wrap;
+    }
+
+    .card-contenido {
+        padding: 18px;
+    }
+
+    .formulario {
+        padding: 18px;
+    }
+
+    .footer {
+        padding: 20px 12px;
+        font-size: 0.9rem;
+    }
+
+
+
+
+}
+
+
+

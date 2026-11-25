@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Tecnológica</title>
+    <link href="css/style.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <header class="encabezado">
+        <nav aria-label="Navegación principal" class="navbar">
+            <a class="logo" href="#inicio">TechStore</a>
+            <ul class="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SLIDER / BANNER
+             En la práctica se aplicarán estilos CSS para convertir
+             esta sección en un slider con tres promociones. -->
+        <section id="inicio" aria-label="Promociones" class="slider">
+            <div class="slides">
+                <article class="slide slide-1">
+                    <div class="slide-contenido">
+                        <p class="etiqueta">Tecnología para todos</p>
+                        <h2>Equipa tus ideas</h2>
+                        <p>Encuentra los dispositivos que necesitas para estudiar y trabajar.</p>
+                        <a class="boton" href="#productos">Ver productos</a>    
+                    </div>
+                </article>
+
+                <article class="slide slide-2">
+                    <div class="slide-contenido">
+                        <p class="etiqueta">Ofertas especiales</p>
+                        <h2>Renueva tu tecnología</h2>
+                        <p>Descubre productos seleccionados para tu día a día.</p>
+                        <a class="boton" href="#productos">Explorar catálogo</a>
+                    </div>
+                </article>
+
+                <article class="slide slide-3">
+                    <div class="slide-contenido">
+                        <p class="etiqueta">Conéctate mejor</p>
+                        <h2>Accesorios que inspiran</h2>
+                        <p>Complementa tus dispositivos con nuestros accesorios.</p>
+                        <a  class="boton" href="#productos">Conocer productos</a>
+                    </div>
+                </article>
+            </div>
+            <div class="indicadores" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            
+        </section>
+
+        <!-- CATÁLOGO DE PRODUCTOS -->
+        <section id="productos" class="productos">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">Nuestro Catálogo</p>
+                <h2>Productos Destacados</h2>
+                <p>Conoce algunos de nuestros productos destacados.</p>
+            </div>
+        
+            <div class="contenedor-cards">
+                <!-- PRODUCTO 1 -->
+                <article class="card">
+                    <img src="https://placehold.co/600x400?text=Laptop"
+                         alt="Laptop">
+                    <div class="card-contenido" >
+                        <span class="categoria">Computación</span>
+                        <h3>Laptop HP</h3>
+                        <p>Ideal para actividades académicas y profesionales.</p>
+                        <div class="card-pie"><strong class="precio">$650</strong><a href="#contacto">Consultar</a></div> 
+                    </div>
+                </article>
+
+                <!-- PRODUCTO 2 -->
+                <article class="card">
+                    <img src="https://placehold.co/600x400?text=Smartphone"
+                         alt="Smartphone">
+                    <div class="card-contenido">
+                        <span class="categoria">Telefonía</span>
+                        <h3>Smartphone Samsung</h3>
+                        <p>Un dispositivo práctico para tu comunicación diaria.</p>
+                        <div class="card-pie"><strong class="precio">$350.00</strong><a href="#contacto">Consultar</a></div>
+                    </div>
+                </article>
+
+                <!-- PRODUCTO 3 -->
+                <article class="card">
+                    <img src="https://placehold.co/600x400?text=Auriculares"
+                         alt="Auriculares Bluetooth">
+                    <div class="card-contenido">
+                        <span class="categoria">Accesorios</span>
+                        <h3>Auriculares Bluetooth</h3>
+                        <p>Disfruta de tu música y contenido favorito.</p>
+                        <div class="card-pie"><strong class="precio">$45.00</strong><a href="#contacto">Consultar</a></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE CONTACTO -->
+        <section id="contacto" class="contacto seccion">
+            <div class="encabezado-seccion">
+              <p>Estamos para ayudarte</p>  
+              <h2>Contáctanos</h2>
+              <p>Completa el formulario y cuéntanos qué producto te interesa.</p>
+            </div>
+           
+
+            <form action="#" method="post" class="formulario">
+                <div class="campo" >
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text"
+                           id="nombre"
+                           name="nombre"
+                           placeholder="Escribe tu nombre"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email"
+                           id="correo"
+                           name="correo"
+                           placeholder="nombre@correo.com"
+                           required>
+                </div>
+
+                <div class="campo">
+                    <label for="asunto">Asunto:</label>
+                    <input type="text"
+                           id="asunto"
+                           name="asunto"
+                           placeholder="Motivo de contacto">
+                </div>
+
+                <div class="campo">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje"
+                              name="mensaje"
+                              rows="5"
+                              placeholder="Escribe tu mensaje..."
+                              required></textarea>
+                </div>
+
+                <button class="boton boton-enviar" type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer">
+        <p>© 2026 TechStore. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Biblioteca Lemas</title>
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+    <body>
+        <header>
+            <h1>Biblioteca Lemas Instituto</h1> 
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a class="menu" href="#servicios">Servicios</a></li>
+                    <li><a class="menu" href="#horarios">Horarios</a></li>
+                    <li><a class="menu" href="#reservas">Reservas</a></li>
+                    <li><a href="#contacto">Conctacto</a></li>
+                    <li><a target="_parent" href="https://vitec.teclemas.edu.ec/">Aula Virtual</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="servicios">
+              <h2 id="servicio">Servicios de Biblitecas Lemas</h2> 
+              <p>La biblioteca ofrece préstamos de libros para los estudiantes y docentes de la institución:</p> 
+              <ul>
+                <li>Préstamo de libros a domicilio
+                    <ol>
+                        <li>Planta baja: estudio en silencio</li>
+                        <li>Primer piso: trabajo en grupo</li>
+                    </ol>
+                </li>
+                <li>Sala de estudio con internet</li>
+                <li>Acceso a bases de datos digitales</li>
+              </ul> 
+              <h3> Pasos para pedir un préstamo</h3> 
+              <ol>
+                <li>Busca el libro en el catálogo.</li>
+                <li>Llene el formulario de reserva.</li>
+                <li>Retira el libro con tu carne estudiantil.</li>
+              </ol>
+            </section>
+
+            <section id="horarios">
+              <h2>Horarios de Atención</h2> 
+              <p id="texto">La biblioteca ofrece los siguientes horarios de atención a la comunidad estudiantil</p> 
+              
+              <table border="1">
+                <caption>Horario de la biblioteca, periodo 2026</caption>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Apertura</th>
+                        <th>Cierre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes a jueves</td>
+                        <td>8:00 am</td>
+                        <td>17:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>10:30 am</td>
+                        <td>18:00 pm</td>
+                    </tr>
+                    <tr>
+                        <td>Fines de Semana</td>
+                        <td>09:00 am</td>
+                        <td>12:00 pm</td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+              </table>  
+            </section>
+
+            <section id="reservas">
+                <h2>Formulario de Reservación</h2> 
+                <form action="" method="post">
+                    <fieldset>Datos del estudiante
+                        <p>
+                            <label for="nombres">Nombres</label>
+                            <input id="nombres" name="nombres" type="text" required>
+                        </p>
+                        <p>
+                            <label for="apellidos">Apellidos</label>
+                            <input id="apellidos" name="apellidos" type="text" required>
+                        </p>
+                        <p>
+                            <label for="identificacion">Identificación</label>
+                            <input id="identificacion" name="identificacion" type="text" required maxlength="10" pattern="[0-9] { 10 } ">
+                        </p>
+                        <p>
+                            <label for="email">Email Institucional</label>
+                            <input id="email" name="email" type="email" required>
+                        </p>
+                        <p>
+                            <label for="fechanacimiento">Fecha de Nacimiento</label>
+                            <input id="fechanacimiento" name="fechanacimiento" type="date" required>
+                        </p>
+
+                        <p>
+                            <label for="carrera">Carrera:</label>
+                            <select id="carreras" name="carreras"> 
+                                <option value="">Seleccione la Carrera</option>
+                                <option value="software">Ingeniería de Software</option>
+                                <option value="civil">Ingeniería Civil</option>
+                                <option value="industrial">Ingeniería Industrial</option>
+                                <option value="alimentos">Ingeniería de Alimentos</option>
+                            </select>
+                        </p>          
+                    </fieldset>
+
+                    <fieldset>Datos de la reserva
+                        <p>
+                            <label for="libro">Título del libro</label>
+                            <input id="libro" name="libro" type="text" required>
+                        </p>
+                        <p>
+                            <label for="devolucion">Fecha de Devolución</label>
+                            <input id="devolucion" name="devolucion" type="date" required>
+                        </p>
+                        <p>
+                            <label for="cantidad">Dias de prestamo</label>
+                            <input id="cantidad" name="cantidad" type="number" required min="1" max="7" >
+                        </p>
+                        <p>Tipo de préstamo:
+                            <label for="domicilio">Domicilio</label>
+                            <input type="radio" id="domicilio" name="tipo">
+                            <label for="institucion">Institucion</label>
+                            <input type="radio" id="institucion" name="tipo">
+                            <label for="sala">Sala</label>
+                            <input type="radio" id="sala" name="tipo">
+                        </p>
+                        <p>
+                            <label for="observaciones">Observaciones</label>
+                            <textarea rows="4" cols="100" id="observaciones" name="observaciones"></textarea>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="acepto" name="acepto" required>
+                            <label for="acepto">Acepto devolver el libro en la fecha indicada</label>
+                        </p>
+                        <p>
+                            <input type="checkbox" id="terminos" name="terminos" required>
+                            <label for="acepto">Acepto los términos y condiciones</label>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </p>
+                </form>
+            </section>
+
+            <section>
+                <div id="div1">Ejemplo 1</div>
+                <div>Ejemplo 2</div>
+                <div>Ejemplo 3</div>
+            </section>
+        </main>
+        <footer id="contacto">
+            <address>
+                Biblioteca TECLEMAS · Milagro, Ecuador <br>
+                Correo: <a href="mailto:ybarmijos@lemas.edu.ec">ybarmijos@lemas.edu.ec</a>
+            </address>
+            <p><small>©  2026 Instituto Superior Tecnológico LEMAS </small></p>
+        </footer>
+    </body>
+</html>
